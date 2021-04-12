@@ -1,0 +1,28 @@
+@import "colors.scss";
+
+.footer {
+    width: 100vw;
+    background-color: $cinzaNav;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+    .social-icons {
+        display: inline-flex;
+
+        a{
+            color: $cinzaC;
+            font-size: 20px;
+            object-fit: contain;
+            padding: 10px;
+            cursor: pointer;
+            transition: color .3s ease;
+        }
+
+        a:focus {
+            color: white;
+            transition: color .3s ease;
+        }
+    }
+}

@@ -1,0 +1,66 @@
+@import "colors.scss";
+@import "footer.scss";
+@import "navbar.scss";
+@import "light-theme.scss";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: $bg;
+
+    body.light {
+        background-color: $cinzaC;
+    }
+
+    .top-nav {
+        position: absolute;
+        top: 0;
+        width: 100vw;
+    }
+
+    .body {
+        overflow: auto;
+
+        .div-align {
+            .table {
+                color: white;
+                -webkit-box-shadow: 5px 11px 5px -4px rgba(132, 86, 229, 0.82);
+                box-shadow: 5px 11px 5px -4px rgba(132, 86, 229, 0.82);
+                font-family: "Roboto", sans-serif;
+                font-size: 13px;
+
+                table {
+                    border-collapse: collapse;
+                }
+
+                td {
+                    padding: 15px;
+                    text-align: left;
+                    border-bottom: 1px solid $roxoC;
+                }
+
+                th {
+                    background-color: $roxoC;
+                    height: 50px;
+                }
+            }
+        }
+    }
+
+    .footer {
+        position: absolute;
+        bottom: 0;
+    }
+}

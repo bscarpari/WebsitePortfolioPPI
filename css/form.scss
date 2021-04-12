@@ -1,0 +1,217 @@
+@import "colors.scss";
+
+.form-section {
+    display: flex;
+    flex-direction: column;
+    color: $cinzaC;
+    margin-bottom: 5em;
+
+    .title {
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+        color: $roxoC;
+
+        i {
+            padding: 0.375em;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin: 20px 0;
+            color: $roxoC;
+        }
+    }
+
+    .desc {
+        text-align: center;
+        font-size: 14px;
+        padding: 1em;
+        color: $cinzaC;
+    }
+
+    .form-wrapper {
+        background-color: transparent;
+        padding: 0px 30px;
+        box-shadow: 0px 4px 4px #50389C;
+
+        .title {
+            display: flex;
+            justify-content: left;
+            font-weight: bolder;
+            color: $cinzaC2;
+            font: bolder;
+            font-size: 16px;
+        }
+
+        .input-group {
+            margin-bottom: 2em;
+            margin-top: 2em;
+        }
+
+        input::placeholder {
+            color: $cinzaC;
+        }
+
+        .radio {
+            input[type=radio] {
+                display: none;
+            }
+
+            label {
+                cursor: pointer;
+                color: $cinzaC;
+            }
+
+            input[type=radio]+label:before {
+                border: 1px solid $cinzaC;
+                content: "\00a0";
+                display: inline-block;
+                font: 16px/1em sans-serif;
+                height: 16px;
+                margin: 0 0.5em 0 0;
+                padding: 0;
+                vertical-align: top;
+                width: 16px;
+                border-radius: 50%;
+                margin-bottom: 1em;
+            }
+
+            input[type=radio]:checked+label:before {
+                color: $roxoC;
+                content: "\2713";
+                text-align: center;
+            }
+        }
+
+        .checkbox {
+            .container {
+                display: block;
+                position: relative;
+                padding-left: 35px;
+                margin-bottom: 1em;
+                cursor: pointer;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+
+                input {
+                    position: absolute;
+                    opacity: 0;
+                    cursor: pointer;
+                    height: 0;
+                    width: 0;
+                }
+
+                .checkmark {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 20px;
+                    width: 20px;
+                    background-color: transparent;
+                    border: 1px solid $roxoC;
+                }
+
+                input:checked~.checkmark {
+                    background-color: $roxoC;
+                }
+
+                .checkmark:after {
+                    content: "";
+                    position: absolute;
+                    display: none;
+                }
+
+                input:checked~.checkmark:after {
+                    display: block;
+                }
+
+                .checkmark:after {
+                    left: 6px;
+                    top: 1px;
+                    width: 5px;
+                    height: 12px;
+                    border: solid white;
+                    border-width: 0 3px 3px 0;
+                    -webkit-transform: rotate(45deg);
+                    -ms-transform: rotate(45deg);
+                    transform: rotate(45deg);
+                }
+            }
+        }
+
+        input {
+            width: 100%;
+            margin-top: 8px;
+            padding: 7px;
+            font-size: 12px;
+            border-radius: 13px;
+            font-weight: 900;
+            color: $cinzaC;
+            border: 1.5px solid $cinzaE2;
+            outline: none;
+            background-color: transparent;
+        }
+
+        .details {
+            display: flex;
+            flex-direction: column;
+            padding: 1em 0em;
+
+            .appearance-select {
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                background: url(/assets/icons/chevron-down.svg) no-repeat $bg;
+                background-position: 218px center;
+                width: 250px;
+                height: 30px;
+                border: 1px solid $cinzaC;
+                font-weight: bolder;
+                color: $cinzaC;
+                outline: none;
+                padding-left: 10px;
+            }
+        }
+
+        textarea {
+            margin-top: 1em;
+            background-color: transparent;
+            resize: none;
+            color: $cinzaC;
+            border-radius: 11px;
+            border: 1.5px solid $cinzaE2;
+            outline: none;
+            width: 100%;
+            padding: 0.5em;
+        }
+
+        .btn {
+            display: block;
+            min-width: 100%;
+            border: none;
+            background-color: transparent;
+            border: 1.5px solid $roxoC;
+            color: $roxoC;
+            font-weight: 900;
+            border-radius: 25px;
+            padding: 8px;
+            outline: none;
+            cursor: pointer;
+            margin-top: 2em;
+        }
+
+        .btn:focus {
+            background-color: $roxoC;
+            color: white;
+        }
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .form-section {
+        width: 40vw !important;
+    }
+}

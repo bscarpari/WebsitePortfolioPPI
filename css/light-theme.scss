@@ -1,0 +1,118 @@
+@import 'navbar.scss';
+@import 'footer.scss';
+@import 'form.scss';
+
+.light {
+    background-color: rgb(238, 238, 238);
+    transition: 0.2s linear;
+
+    .top-nav {
+        header {
+            background-image: linear-gradient(90deg, #3b2974, #8456e5);
+        }
+
+        .nav-links {
+            a {
+                color: white;
+            }
+
+            a:focus {
+                border-bottom: 3px solid white;
+            }
+        }
+    }
+
+    #about {
+        strong {
+            color: #8456e5 !important;
+        }
+    }
+
+    .desc {
+        h2 {
+            color: #8456e5 !important;
+        }
+    }
+
+    .form-section {
+        .title {
+            color: #8456e5 !important;
+        }
+
+        i {
+            color: #8456e5;
+        }
+
+        .input-group {
+            color: #8456e5;
+        }
+
+        input::placeholder {
+            color: #8456e5;
+        }
+
+        .radio {
+            label {
+                color: #8456e5;
+            }
+
+            input[type=radio]+label:before {
+                border: 1px solid #8456e5;
+            }
+        }
+
+        input {
+            border: 1.5px solid #8456e5;
+            color: #3b2974;
+        }
+
+        select {
+            background: url(/assets/icons/chevron-down.svg) no-repeat #eee !important;
+            color: #8456e5 !important;
+            border: 1px solid #8456e5 !important;
+        }
+
+
+        textarea {
+            border: 1.5px solid #8456e5;
+        }
+    }
+
+    #projects {
+
+        .title,
+        .item,
+        h2 {
+            color: #8456e5 !important;
+        }
+    }
+
+    .table {
+        table {
+            border-collapse: collapse;
+            background-color: white !important;
+        }
+
+        td {
+            color: #8456e5 !important;
+        }
+    }
+
+    .footer {
+        background-image: linear-gradient(90deg, #8456e5, #3b2974);
+
+        .social-icons {
+            display: inline-flex;
+
+            a {
+                color: white;
+
+            }
+
+            a:focus {
+                color: 202024;
+            }
+        }
+    }
+
+}

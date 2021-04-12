@@ -1,0 +1,78 @@
+@import "style.scss";
+
+body {
+    font-family: "Roboto", Arial, sans-serif;
+}
+
+.div-align {
+    justify-content: center;
+    align-items: center;
+    opacity: 0.8;
+
+    .form-section {
+        margin: 10em 0em;
+        display: flex;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: none !important;
+
+        .form-wrapper {
+            padding: 0;
+            width: 20em;
+            box-shadow: none;
+        }
+
+        img {
+            max-width: 10em;
+            padding: 1em;
+        }
+
+        h1 {
+            font-size: 28px;
+            letter-spacing: 1px;
+            margin-bottom: 1.5em;
+            color: $roxoC;
+        }
+
+        form {
+
+            .input-block input {
+                width: 100%;
+                margin-top: 8px;
+                padding: 7px;
+                font-size: 12px;
+                border-radius: 13px;
+                color: $cinzaC;
+                border: 1.5px solid $cinzaE2;
+            }
+
+            ::placeholder {
+                color: $cinzaE2;
+            }
+
+            .btn {
+                margin: 1em 0em;
+                display: block;
+                min-width: 100%;
+                border: none;
+                background-color: $roxoC;
+                color: white;
+                border-radius: 12px;
+                padding: 8px;
+                font-weight: bolder;
+                font-size: 16px;
+                outline: none;
+                // border: 1px solid red;
+            }
+        }
+    }
+}
+
+#wave {
+    position: absolute;
+    bottom: 0;
+    opacity: 0.75;
+}

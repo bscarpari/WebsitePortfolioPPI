@@ -1,0 +1,156 @@
+@import 'style.scss';
+
+
+.div-align {
+  #about {
+    display: flex;
+    align-items: center !important;
+    justify-content: center !important;
+    padding-bottom: 6em;
+
+    .content {
+      width: 70%;
+      padding-top: 5em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: $cinzaC;
+      text-align: center;
+
+      h1 {
+        font-size: 22px;
+        font-weight: lighter;
+        padding: 1em;
+      }
+
+      h2 {
+        font-size: 16px;
+        font-weight: lighter;
+        padding: 10px;
+      }
+
+      strong {
+        color: white;
+      }
+
+      img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 50%;
+        background-color: $cinzaNav;
+        -webkit-box-shadow: 0px 1px 5px 5px rgba(59, 41, 116, 0.9);
+        box-shadow: 0px 1px 5px 5px rgba(59, 41, 116, 0.9);
+      }
+
+      .buttons {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-decoration: none;
+          color: $roxoC;
+          width: 160px;
+          height: 30px;
+          border: 2px solid $roxoC;
+          border-radius: 11px;
+          margin: 1em;
+          font-weight: 1000;
+          font-size: 14px;
+        }
+
+        a:focus {
+          color: white;
+          background: rgb(59, 41, 116);
+          background: linear-gradient(90deg, rgba(59, 41, 116, 1) 0%, rgba(132, 86, 229, 1) 100%);
+        }
+      }
+    }
+  }
+
+  #projects {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    margin-bottom: 5em;
+
+    .title {
+      display: flex;
+      align-items: baseline;
+      text-indent: 1em;
+
+      i {
+        text-indent: 0.375em;
+      }
+    }
+
+    #items {
+      display: flex;
+      overflow-x: hidden;
+      scroll-snap-type: x mandatory;
+      --webkit-overflow-scrolling: touch;
+      scroll-behavior: smooth;
+
+      &.grabbing {
+        cursor: grabbing;
+      }
+
+    }
+
+    .item {
+      flex: none;
+      width: 40vw;
+      scroll-snap-align: start;
+      pointer-events: none;
+      text-align: center;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      padding: 1em;
+      object-fit: cover;
+    }
+
+    h2 {
+      font-size: 16px;
+      color: $cinzaC;
+    }
+
+    a {
+      display: flex;
+      justify-content: center;
+      cursor: pointer
+    }
+
+    .subtitle,
+    a {
+      margin-top: 1em;
+      display: flex;
+      align-items: center;
+      font-family: "Roboto";
+      color: $roxoC;
+      text-decoration: none;
+
+      h2 {
+        color: $roxoC;
+        text-indent: 1em;
+      }
+    }
+
+    @media only screen and (max-width: 1200px) {
+      .item {
+        width: 80vw !important;
+      }
+    }
+  }
+}
+
+
+
+

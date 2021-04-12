@@ -1,0 +1,244 @@
+.form-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #737380;
+  margin-bottom: 5em;
+}
+
+.form-section .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #8456e5;
+}
+
+.form-section .title i {
+  padding: 0.375em;
+}
+
+.form-section .title h1 {
+  font-size: 36px;
+  margin: 20px 0;
+  color: #8456e5;
+}
+
+.form-section .desc {
+  text-align: center;
+  font-size: 14px;
+  padding: 1em;
+  color: #737380;
+}
+
+.form-section .form-wrapper {
+  background-color: transparent;
+  padding: 0px 30px;
+  -webkit-box-shadow: 0px 4px 4px #50389C;
+          box-shadow: 0px 4px 4px #50389C;
+}
+
+.form-section .form-wrapper .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  font-weight: bolder;
+  color: #a9a9b8;
+  font: bolder;
+  font-size: 16px;
+}
+
+.form-section .form-wrapper .input-group {
+  margin-bottom: 2em;
+  margin-top: 2em;
+}
+
+.form-section .form-wrapper input::-webkit-input-placeholder {
+  color: #737380;
+}
+
+.form-section .form-wrapper input:-ms-input-placeholder {
+  color: #737380;
+}
+
+.form-section .form-wrapper input::-ms-input-placeholder {
+  color: #737380;
+}
+
+.form-section .form-wrapper input::placeholder {
+  color: #737380;
+}
+
+.form-section .form-wrapper .radio input[type=radio] {
+  display: none;
+}
+
+.form-section .form-wrapper .radio label {
+  cursor: pointer;
+  color: #737380;
+}
+
+.form-section .form-wrapper .radio input[type=radio] + label:before {
+  border: 1px solid #737380;
+  content: "\00a0";
+  display: inline-block;
+  font: 16px/1em sans-serif;
+  height: 16px;
+  margin: 0 0.5em 0 0;
+  padding: 0;
+  vertical-align: top;
+  width: 16px;
+  border-radius: 50%;
+  margin-bottom: 1em;
+}
+
+.form-section .form-wrapper .radio input[type=radio]:checked + label:before {
+  color: #8456e5;
+  content: "\2713";
+  text-align: center;
+}
+
+.form-section .form-wrapper .checkbox .container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 1em;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.form-section .form-wrapper .checkbox .container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.form-section .form-wrapper .checkbox .container .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: transparent;
+  border: 1px solid #8456e5;
+}
+
+.form-section .form-wrapper .checkbox .container input:checked ~ .checkmark {
+  background-color: #8456e5;
+}
+
+.form-section .form-wrapper .checkbox .container .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.form-section .form-wrapper .checkbox .container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.form-section .form-wrapper .checkbox .container .checkmark:after {
+  left: 6px;
+  top: 1px;
+  width: 5px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.form-section .form-wrapper input {
+  width: 100%;
+  margin-top: 8px;
+  padding: 7px;
+  font-size: 12px;
+  border-radius: 13px;
+  font-weight: 900;
+  color: #737380;
+  border: 1.5px solid #32323F;
+  outline: none;
+  background-color: transparent;
+}
+
+.form-section .form-wrapper .details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1em 0em;
+}
+
+.form-section .form-wrapper .details .appearance-select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url(/assets/icons/chevron-down.svg) no-repeat #121214;
+  background-position: 218px center;
+  width: 250px;
+  height: 30px;
+  border: 1px solid #737380;
+  font-weight: bolder;
+  color: #737380;
+  outline: none;
+  padding-left: 10px;
+}
+
+.form-section .form-wrapper textarea {
+  margin-top: 1em;
+  background-color: transparent;
+  resize: none;
+  color: #737380;
+  border-radius: 11px;
+  border: 1.5px solid #32323F;
+  outline: none;
+  width: 100%;
+  padding: 0.5em;
+}
+
+.form-section .form-wrapper .btn {
+  display: block;
+  min-width: 100%;
+  border: none;
+  background-color: transparent;
+  border: 1.5px solid #8456e5;
+  color: #8456e5;
+  font-weight: 900;
+  border-radius: 25px;
+  padding: 8px;
+  outline: none;
+  cursor: pointer;
+  margin-top: 2em;
+}
+
+.form-section .form-wrapper .btn:focus {
+  background-color: #8456e5;
+  color: white;
+}
+
+@media only screen and (min-width: 1000px) {
+  .form-section {
+    width: 40vw !important;
+  }
+}
+/*# sourceMappingURL=form.css.map */

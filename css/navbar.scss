@@ -1,0 +1,259 @@
+@import "colors.scss";
+
+.top-nav {
+    header {
+        padding-left: 50px;
+        padding-right: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 60px;
+        background-color: $cinzaNav;
+
+        .logo {
+            cursor: pointer;
+
+            img {
+                width: 40px;
+                height: 40px;
+            }
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            font-weight: 1000;
+            padding: 0px 20px;
+            height: 60px;
+            color: $cinzaC;
+            border-bottom: 3px solid transparent;
+            transition: border 0.3s ease 0s;
+        }
+
+        .nav-links a:focus {
+            border-bottom: 3px solid $roxoC;
+            transition: border 0.3s ease 0s;
+            color: white;
+            transition: color 0.3s ease 0s;
+        }
+
+        .switch-theme {
+            .switch {
+                position: relative;
+                display: inline-block;
+                width: 60px;
+                height: 34px;
+            }
+
+            .switch input {
+                opacity: 0;
+                width: 0;
+                height: 0;
+            }
+
+            .slider {
+                position: absolute;
+                cursor: pointer;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: #ccc;
+                -webkit-transition: .4s;
+                transition: .4s;
+            }
+
+            .slider:before {
+                position: absolute;
+                content: "";
+                height: 26px;
+                width: 26px;
+                left: 4px;
+                bottom: 4px;
+                background-color: white;
+                -webkit-transition: .4s;
+                transition: .4s;
+            }
+
+            input:checked+.slider {
+                background-color: rgba(59, 41, 116, 1);
+            }
+
+            input:focus+.slider {
+                box-shadow: 0 0 1px rgba(59, 41, 116, 1);
+            }
+
+            input:checked+.slider:before {
+                -webkit-transform: translateX(26px);
+                -ms-transform: translateX(26px);
+                transform: translateX(26px);
+            }
+
+            .slider.round {
+                border-radius: 34px;
+            }
+
+            .slider.round:before {
+                border-radius: 50%;
+            }
+        }
+    }
+
+    .menu {
+        padding: 9px 25px;
+        background-color: $roxoE;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        color: $cinzaC;
+        transition: color 0.3s ease 0s;
+    }
+
+    .menu:hover {
+        color: white;
+    }
+
+    .overlay {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        background-color: $cinzaNav;
+        overflow-x: hidden;
+        transition: width 0.5s ease 0s;
+        font-family: 'Roboto', sans-serif;
+
+        .content {
+            display: flex;
+            height: 100%;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        a {
+            text-decoration: none;
+            padding: 15px;
+            font-size: 36px;
+            display: block;
+            transition: color 0.3s ease 0s;
+            color: $cinzaC;
+        }
+
+        a:focus {
+            color: #3b2974;
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 45px;
+            font-size: 60px;
+            color: #edf0f1;
+            cursor: pointer;
+        }
+
+        .switch-theme-mob {
+            .switch {
+                position: relative;
+                display: inline-block;
+                width: 60px;
+                height: 34px;
+                padding: 15px;
+            }
+
+            .switch input {
+                opacity: 0;
+                width: 0;
+                height: 0;
+            }
+
+            .slider {
+                position: absolute;
+                cursor: pointer;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: #ccc;
+                -webkit-transition: .4s;
+                transition: .4s;
+            }
+
+            .slider:before {
+                position: absolute;
+                content: "";
+                height: 26px;
+                width: 26px;
+                left: 4px;
+                bottom: 4px;
+                background-color: white;
+                -webkit-transition: .4s;
+                transition: .4s;
+            }
+
+            input:checked+.slider {
+                background-color: rgba(59, 41, 116, 1);
+            }
+
+            input:focus+.slider {
+                box-shadow: 0 0 1px rgba(59, 41, 116, 1);
+            }
+
+            input:checked+.slider:before {
+                -webkit-transform: translateX(26px);
+                -ms-transform: translateX(26px);
+                transform: translateX(26px);
+            }
+
+            .slider.round {
+                border-radius: 34px;
+            }
+
+            .slider.round:before {
+                border-radius: 50%;
+            }
+        }
+    }
+
+    .overlay--active {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    .switch-theme {
+        display: initial;
+        justify-content: center;
+    }
+
+    .nav-links {
+        display: initial;
+    }
+
+    .menu {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .switch-theme {
+        display: none !important;
+    }
+
+    .nav-links {
+        display: none !important;
+    }
+
+    .menu {
+        display: initial;
+    }
+}
