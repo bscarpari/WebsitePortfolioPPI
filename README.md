@@ -3,3 +3,7 @@
 - 4 telas
 - 2 formulários
 - Visual simples
+
+# O que é necessário?
+# Caso não possua SASS
+- npm install -g sass
